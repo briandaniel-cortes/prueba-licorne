@@ -39,8 +39,12 @@ $Res_Consulta = $conexion->Query($listardatos);
                     </div>
 
                     <p id="myMensaje<?php echo $datos['id']; ?>"></p>
-                    <center><button id="myBtnSi<?php echo $datos['id']; ?>" class="botonsi">Si</button><br>
-                    <button id="myBtnNo<?php echo $datos['id']; ?>" class="botonno">No</button></center>
+                    <center><button id="myBtnSi<?php echo $datos['id']; ?>" class="botonsi" >Si</button><br>
+                        <button id="myBtnNo<?php echo $datos['id']; ?>" class="botonno">No</button>
+                    </center>
+                    <form action="guardar.php" method="POST" id="form<?php echo $datos['id']; ?>">
+                        <input type="hidden" name="valoor" value="<?php echo $datos['id']; ?>">
+                    </form>
                 </div>
             </div>
             <div class="CajaProducto">
@@ -69,10 +73,10 @@ $Res_Consulta = $conexion->Query($listardatos);
                 var btnSi<?php echo $datos['id']; ?> = document.getElementById("myBtnSi<?php echo $datos['id']; ?>");
                 var btnNo<?php echo $datos['id']; ?> = document.getElementById("myBtnNo<?php echo $datos['id']; ?>");
                 var span<?php echo $datos['id']; ?> = document.getElementsByClassName("close<?php echo $datos['id']; ?>")[0];
-               
+
                 var mensaje<?php echo $datos['id']; ?> = document.getElementById("myMensaje<?php echo $datos['id']; ?>");
 
-               
+
                 btn<?php echo $datos['id']; ?>.onclick = function() {
                     modal<?php echo $datos['id']; ?>.style.display = "block";
                     mensaje<?php echo $datos['id']; ?>.textContent = "Confirma Su pedido?";
@@ -81,6 +85,7 @@ $Res_Consulta = $conexion->Query($listardatos);
                 }
 
                 btnSi<?php echo $datos['id']; ?>.onclick = function() {
+                    document.getElementById('form<?php echo $datos['id']; ?>').submit();
                     mensaje<?php echo $datos['id']; ?>.textContent = "Proceso de compra finalizado";
                     btnSi<?php echo $datos['id']; ?>.style.display = "none";
                     btnNo<?php echo $datos['id']; ?>.style.display = "none";
@@ -92,12 +97,12 @@ $Res_Consulta = $conexion->Query($listardatos);
                     btnNo<?php echo $datos['id']; ?>.style.display = "none";
                 }
 
-               
+
                 span<?php echo $datos['id']; ?>.onclick = function() {
                     modal<?php echo $datos['id']; ?>.style.display = "none";
                 }
 
-               
+
                 window.onclick = function(event) {
                     if (event.target == modal<?php echo $datos['id']; ?>) {
                         modal<?php echo $datos['id']; ?>.style.display = "none";
@@ -110,7 +115,7 @@ $Res_Consulta = $conexion->Query($listardatos);
 
     ?>
 
-
+  
 
 
 
