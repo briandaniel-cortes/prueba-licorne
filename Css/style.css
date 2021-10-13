@@ -4,6 +4,7 @@ padding: auto;
 width: 90%;
 height: auto;
 background-color: rgb(253, 169, 90);
+font-size: 130%;
 }
 
 .header{
@@ -45,7 +46,16 @@ background-color: rgb(253, 169, 90);
     font-size: 120%;
     text-align: center;
 }
-
+.botonsi{
+background-color: rgb(87, 255, 9);
+font-size: 160%;
+width: 200px;
+}
+.botonno{
+background-color: crimson;
+font-size: 160%;
+width: 200px;
+}
 p{
     font-size: 20px;
 }

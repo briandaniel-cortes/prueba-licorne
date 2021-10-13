@@ -34,13 +34,13 @@ $Res_Consulta = $conexion->Query($listardatos);
                         </div>
                         <div class="FotoProducto"><img class="ImagenProducto" src='../Imagenes/<?php echo $datos['imagen']; ?>' alt=""></div>
                         <br>
-
+                        <h3><?php echo $datos['precio']; ?>$</h3>
                         <br>
                     </div>
 
                     <p id="myMensaje<?php echo $datos['id']; ?>"></p>
-                    <button id="myBtnSi<?php echo $datos['id']; ?>">Si</button>
-                    <button id="myBtnNo<?php echo $datos['id']; ?>">No</button>
+                    <center><button id="myBtnSi<?php echo $datos['id']; ?>" class="botonsi">Si</button><br>
+                    <button id="myBtnNo<?php echo $datos['id']; ?>" class="botonno">No</button></center>
                 </div>
             </div>
             <div class="CajaProducto">
@@ -69,10 +69,10 @@ $Res_Consulta = $conexion->Query($listardatos);
                 var btnSi<?php echo $datos['id']; ?> = document.getElementById("myBtnSi<?php echo $datos['id']; ?>");
                 var btnNo<?php echo $datos['id']; ?> = document.getElementById("myBtnNo<?php echo $datos['id']; ?>");
                 var span<?php echo $datos['id']; ?> = document.getElementsByClassName("close<?php echo $datos['id']; ?>")[0];
-                // Get the button that opens the modal
+               
                 var mensaje<?php echo $datos['id']; ?> = document.getElementById("myMensaje<?php echo $datos['id']; ?>");
 
-                // When the user clicks the button, open the modal 
+               
                 btn<?php echo $datos['id']; ?>.onclick = function() {
                     modal<?php echo $datos['id']; ?>.style.display = "block";
                     mensaje<?php echo $datos['id']; ?>.textContent = "Confirma Su pedido?";
@@ -92,12 +92,12 @@ $Res_Consulta = $conexion->Query($listardatos);
                     btnNo<?php echo $datos['id']; ?>.style.display = "none";
                 }
 
-                // When the user clicks on <span> (x), close the modal
+               
                 span<?php echo $datos['id']; ?>.onclick = function() {
                     modal<?php echo $datos['id']; ?>.style.display = "none";
                 }
 
-                // When the user clicks anywhere outside of the modal, close it
+               
                 window.onclick = function(event) {
                     if (event.target == modal<?php echo $datos['id']; ?>) {
                         modal<?php echo $datos['id']; ?>.style.display = "none";
