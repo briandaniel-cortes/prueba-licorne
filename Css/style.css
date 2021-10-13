@@ -1,0 +1,51 @@
+.contenedor{
+margin: auto;
+padding: auto;
+width: 90%;
+height: auto;
+background-color: rgb(253, 169, 90);
+}
+
+.header{
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: auto;
+    background-color: rgb(224, 192, 5);
+    position: relative;
+    text-align: center;
+    
+    border: 1px solid #000;
+}
+
+.CajaProducto{
+    margin: auto;
+    padding: auto;
+    width: 60%;
+    height: 100%;
+    background-color: bisque;
+    text-align: center;
+}
+.FotoProducto{
+    width: 60%;
+    border: 1px solid #000;
+    margin: auto;
+    padding: auto;
+}
+.ImagenProducto{
+    width: 100%;
+    border: 1px solid #000;
+}
+.Titulo{
+    font-size: 200%;
+}
+.Button{
+    background-color: rgb(34, 190, 14);
+    border:none;
+    font-size: 120%;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
